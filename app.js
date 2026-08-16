@@ -333,7 +333,7 @@
   function shareText() {
     const typeData = TYPES[lastResultCode];
     if (!typeData) return "うんちMBTI診断やってみた！";
-    return `私は「${typeData.name}（${lastResultCode}）」タイプでした！ #うんちMBTI`;
+    return `私のうんこタイプは「${typeData.name}」でした！`;
   }
 
   function currentUrl() {
