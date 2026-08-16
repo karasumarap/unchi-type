@@ -205,6 +205,7 @@
 
     updateNextButtonState();
     updateProgress();
+    window.scrollTo(0, 0);
   }
 
   function updateNextButtonState() {
@@ -233,6 +234,12 @@
 
     updateNextButtonState();
     updateProgress();
+
+    const nextCard = card.nextElementSibling;
+    const scrollTarget = nextCard && nextCard.classList.contains("q-card") ? nextCard : btnNext;
+    setTimeout(() => {
+      scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 180);
   });
 
   btnNext.addEventListener("click", () => {

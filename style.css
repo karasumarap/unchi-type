@@ -33,6 +33,9 @@
 }
 
 *{ box-sizing: border-box; }
+html{
+  overflow-x: hidden;
+}
 html,body{
   margin:0;
   padding:0;
@@ -55,7 +58,6 @@ button{ font-family: inherit; }
   margin: 0 auto;
   min-height: 100vh;
   min-height: 100dvh;
-  overflow-x: hidden;
 }
 
 /* ---------------------------------------------------------
@@ -282,6 +284,7 @@ button{ font-family: inherit; }
   padding: 18px 16px 16px;
   box-shadow: var(--shadow-soft);
   animation: pop-in .32s ease both;
+  scroll-margin-top: 100px;
 }
 @keyframes pop-in{
   from{ opacity: 0; transform: translateY(10px) scale(.98); }
