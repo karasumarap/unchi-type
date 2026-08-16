@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>うんちMBTI | 16タイプ診断</title>
+<meta name="description" content="全12問・約30秒でわかる、あなたの「うんちタイプ」16診断。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- ===================== START SCREEN ===================== -->
+  <section class="screen screen-start is-active" id="screen-start">
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-mint"></div>
+    <div class="blob blob-yellow"></div>
+
+    <div class="start-content">
+      <div class="badge">
+        <span class="sparkle">✨</span>16タイプ診断<span class="sparkle">✨</span>
+      </div>
+
+      <h1 class="logo">
+        うんち<span class="logo-accent">MBTI</span>
+      </h1>
+      <p class="start-copy">あなたの「出し方」で性格がわかる。</p>
+
+      <div class="start-character" aria-hidden="true">
+        <div class="start-character-glow"></div>
+        <div id="start-char-slot"></div>
+      </div>
+
+      <ul class="start-meta">
+        <li><span class="meta-emoji">📝</span>全12問</li>
+        <li><span class="meta-emoji">⏱️</span>約30秒</li>
+        <li><span class="meta-emoji">💩</span>16タイプ</li>
+      </ul>
+
+      <button class="btn btn-primary btn-start" id="btn-start" type="button">
+        診断をはじめる
+      </button>
+      <p class="start-note">結果はスクショしてシェアしよう</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ SCREENS ===================== -->
+  <section class="screen screen-quiz" id="screen-quiz">
+    <header class="quiz-header">
+      <div class="quiz-progress-row">
+        <span class="quiz-step" id="quiz-step">1 / 3</span>
+        <span class="quiz-count" id="quiz-count">Q1–4</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </header>
+
+    <div class="quiz-scroll">
+      <div class="quiz-questions" id="quiz-questions"></div>
+    </div>
+
+    <footer class="quiz-footer">
+      <button class="btn btn-primary btn-next" id="btn-next" type="button" disabled>
+        次へ
+      </button>
+    </footer>
+  </section>
+
+  <!-- ===================== RESULT SCREEN ===================== -->
+  <section class="screen screen-result" id="screen-result">
+    <div class="result-scroll">
+      <div class="result-card" id="result-card">
+        <p class="result-eyebrow">あなたのうんちタイプは…</p>
+
+        <div class="result-character" id="result-char-slot"></div>
+
+        <div class="result-code" id="result-code">ARBT</div>
+        <h2 class="result-name" id="result-name">タイプ名</h2>
+        <p class="result-tagline" id="result-tagline">一言コピーがここに入ります</p>
+
+        <div class="result-axes" id="result-axes"></div>
+
+        <div class="result-watermark">
+          <span class="wm-dot"></span> unchi-mbti.com
+        </div>
+      </div>
+
+      <div class="share-block">
+        <p class="share-label">この結果をシェアしよう</p>
+        <div class="share-buttons">
+          <button class="btn btn-share btn-share-x" id="btn-share-x" type="button">
+            <span class="share-icon">𝕏</span>で共有
+          </button>
+          <button class="btn btn-share btn-share-line" id="btn-share-line" type="button">
+            <span class="share-icon">💬</span>LINEで共有
+          </button>
+          <button class="btn btn-share btn-share-copy" id="btn-share-copy" type="button">
+            <span class="share-icon">🔗</span>リンクをコピー
+          </button>
+        </div>
+        <button class="btn btn-retry" id="btn-retry" type="button">もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
